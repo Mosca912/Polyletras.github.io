@@ -1,27 +1,575 @@
-
-
-    body{
-    background-color: aquamarine;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    position: relative;
+    height: 100%;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    }
-
-
-.centrado {
-    align-items: center;
-    text-align: center;
-    font-size: 2em;
-    color: rgb(0, 0, 0);
-    margin-top: 20px;
+    background: linear-gradient(
+        90deg,
+        rgb(197, 191, 191) 25%,
+        rgb(247, 242, 242) 73%);
 }
 
+/*ENCABEZADO*/
 
-.pdf-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.encabezado header{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     height: 100vh;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
 }
-iframe {
-    border: none;
+
+.encabezado .nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    transition: all 0.5s ease;
+}
+
+.encabezado .nav.active{
+    background-color: aquamarine;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.encabezado .nav.active .logo,
+.encabezado .nav.active a {
+    color: black;
+}
+
+.encabezado .nav.active a:hover{
+    background: linear-gradient(
+        90deg,
+        rgb(0, 129, 119) 25%,
+        rgb(0, 78, 65) 73%);
+    color: rgb(255, 255, 255);
+}
+
+.encabezado .logo{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: 100px;
+    padding-left: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.encabezado .menu {
+    display: flex;
+}
+
+.encabezado .menu li{
+    list-style: none;
+    margin: 10px;
+}
+
+.encabezado .menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.encabezado .menu li a:hover{
+    padding: 5px 10px;
+    background: linear-gradient(
+        90deg,
+        rgb(0, 185, 170) 25%,
+        rgb(0, 255, 213) 73%);
+    color: black;
+    border-radius: 15px;
+}
+
+
+
+.encabezado .Polyletras {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 250px;
+    color: rgb(255, 255, 255);
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 699px){
+    .encabezado header{
+        background-color: white;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+
+    }
+    
+    .encabezado .nav {
+        position: fixed;
+
+        font-size: 85%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        transition: all 0.5s ease;
+    }
+    
+    .encabezado .nav.active{
+        background-color: aquamarine;
+        padding: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+    }
+    
+    .encabezado .nav.active .logo,
+    .encabezado .nav.active a {
+        color: black;
+    }
+    
+    .encabezado .nav.active a:hover{
+        background: linear-gradient(
+            90deg,
+            rgb(0, 129, 119) 25%,
+            rgb(0, 78, 65) 73%);
+        color: rgb(255, 255, 255);
+    }
+    
+    .encabezado .logo{
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        font-weight: 100px;
+        padding: 2px 0px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .encabezado .menu {
+        display: flex;
+    }
+    
+    .encabezado .menu li{
+        list-style: none;
+        font-size: 12px;
+        margin: 5px;
+    }
+    
+    .encabezado .menu li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.5s ease;
+    }
+    
+    .encabezado .menu li a:hover{
+        padding: 20px 30px;
+        background: linear-gradient(
+            90deg,
+            rgb(0, 185, 170) 25%,
+            rgb(0, 255, 213) 73%);
+        color: black;
+        border-radius: 15px;
+    }
+    
+    .encabezado .Polyletras {
+        text-align: center;
+        font-size: 50px;
+        padding-top: 150px;
+    }
+    
+    .encabezado .Polyletras img{
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 45px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1300px){
+    .encabezado header{
+        background-color: white;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+
+    }
+    
+    .encabezado .nav {
+        position: fixed;
+        font-size: 85%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        transition: all 0.5s ease;
+    }
+    
+    .encabezado .nav.active{
+        background-color: aquamarine;
+        padding: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+    }
+    
+    .encabezado .nav.active .logo,
+    .encabezado .nav.active a {
+        color: black;
+    }
+    
+    .encabezado .nav.active a:hover{
+        background: linear-gradient(
+            90deg,
+            rgb(0, 129, 119) 25%,
+            rgb(0, 78, 65) 73%);
+        color: rgb(0, 0, 0);
+    }
+    
+    .encabezado .logo{
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        font-weight: 100px;
+        padding: 2px 0px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .encabezado .menu {
+        display: flex;
+    }
+    
+    .encabezado .menu li{
+        list-style: none;
+        font-size: 12px;
+        margin: 5px;
+    }
+    
+    .encabezado .menu li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.5s ease;
+    }
+    
+    .encabezado .menu li a:hover{
+        padding: 20px 30px;
+        background: linear-gradient(
+            90deg,
+            rgb(0, 185, 170) 25%,
+            rgb(0, 255, 213) 73%);
+        color: black;
+        border-radius: 15px;
+    }
+    
+    .encabezado .Polyletras {
+        text-align: center;
+        font-size: 50px;
+        padding-top: 150px;
+    }
+    
+    .encabezado .Polyletras img{
+        width: 65%;
+        padding-left: 70px;
+        padding-right: 45px;
+    }
+}
+
+/*ENCABEZADO*/
+
+/*CONTENIDO*/
+
+
+
+body .Resumen{
+    background-color: rgb(149, 247, 247);
+}
+
+body .Resumen h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 15px;
+}
+
+body .Resumen h2{
+    padding: 30px 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+body .Introduccion {
+    background-color: rgb(169, 209, 255);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body .Introduccion h1{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body .Introduccion h2{
+    font-size: 120%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body .Introduccion ul{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+body .Introduccion li{
+    font-size: 150%;
+    color: blue;
+}
+
+body .Objetivos {
+    background-color: rgb(159, 204, 255);
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+
+body .Objetivos h1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: rgb(131, 189, 255);
+}
+
+body .Objetivos h2{
+    padding: 20px 0px 20px 20px;
+    color:rgb(1, 0, 56)
+}
+body .Objetivos h3{
+    padding-left: 20px;
+}
+
+
+
+
+
+
+body .Metodologia{
+    background-color: rgb(134, 190, 255);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+body .Metodologia h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+body .Metodologia h2{
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+
+body .Metodologia h3{
+    padding-left: 25px;
+    background-color: rgb(129, 188, 255);
+}
+
+body .Metodologia h4{
+    padding-left: 50px;
+}
+
+
+
+
+
+body .Caracteristicas {
+    background-color: rgb(56, 149, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+
+}
+
+body .Caracteristicas h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+body .Caracteristicas h2{
+    padding-left: 15px;
+    text-align: center;
+    color: white;
+}
+
+body .Caracteristicas h3{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(46, 137, 240);
+    color: black;
+}
+
+body .Caracteristicas h4{
+    padding-left: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+}
+
+
+
+
+
+body .Componentes {
+    background-color: rgb(0, 119, 255);
+    color: rgb(31, 28, 28);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+body .Componentes h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+body .Componentes h2{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: black;
+}
+
+body .Componentes h3{
+    padding-left: 30px;
+}
+
+body .Requisitos{
+    background-color: rgb(0, 97, 207);
+    color: rgb(238, 238, 238);
+    padding-bottom: 20px;
+    margin-bottom: 20px;   
+}
+
+body .Requisitos h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;      
+}
+
+body .Requisitos h2{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: black;
+}
+
+body .Requisitos h3{
+    padding-left: 30px;
+}
+
+
+
+body .especificaciones {
+    background-color: rgb(0, 75, 160);
+    color: rgb(192, 185, 185);
+    padding-bottom: 20px;
+    margin-bottom: 20px; 
+}
+
+body .especificaciones h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;      
+}
+
+body .especificaciones h2{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: black;
+}
+
+body .especificaciones h3{
+    padding-left: 30px;
+}
+
+body .especificaciones h4{
+    padding-left: 45px;
+}
+
+
+
+body .Diagrama {
+    background-color: rgb(0, 54, 116);
+    color: rgb(192, 185, 185);
+    padding-bottom: 20px;
+    margin-bottom: 20px; 
+}
+
+body .Diagrama h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;      
+}
+
+body .Diagrama h2{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgb(226, 226, 226);
+}
+
+body .Diagrama h3{
+    padding-left: 30px;
+}
+
+
+body .interfaz {
+    background-color: rgb(0, 42, 90);
+    color: rgb(192, 185, 185);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+body .interfaz h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;      
+}
+
+body .ciclo {
+    background-color: rgb(0, 25, 54);
+    color: rgb(192, 185, 185);
+    padding-bottom: 20px;
+    margin-bottom: 20px;  
+}
+
+body .ciclo h1{
+    text-align: center;
+    padding: 20px 0px 20px 0px;      
+}
+
+body .ciclo h2{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgb(226, 226, 226);
+}
+
+body .ciclo h3{
+    padding-left: 30px;
+}
+
+body .ciclo h4{
+    padding-left: 45px;
+}
+
+
+.imagenn {
+    padding-left: 300px;
 }
